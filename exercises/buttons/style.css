@@ -1,0 +1,82 @@
+#btn_coca_cola {
+  display: inline-block;
+  height: 60px;
+  background-color: white;
+  transition: background-color 1.3s, box-shadow 1.3s;
+  border-radius: 15px;
+  padding: 10px 50px;
+  margin-top: 100px;
+}
+
+#btn_coca_cola:hover {
+  background-color: #ff0000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: 1.3s;
+}
+
+#btn_coca_cola img {
+  height: 60px;
+}
+
+#btn_ibm {
+  margin-top: 100px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+}
+
+#btn_ibm:hover {
+  color: white;
+  background-color: #006699;
+  transition: all 1s ease;
+}
+
+#btn_ibm i {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+}
+
+#btn_ibm:hover {
+  color: white;
+  background-color: #006699;
+  padding: 20px 40px;
+  transition: all 1s ease;
+}
+
+#btn_ibm:hover i {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+#btn_ibm:not(:hover) i {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 1s ease;
+}
+
+#btn_lyft {
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #ff00bf;
+  text-decoration: none;
+  border: 2px solid #ff00bf;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: background-color 0.5s, color 0.5s;
+  font-weight: bolder;
+}
+
+#btn_lyft:hover {
+  background-color: #ff00bf;
+  color: white;
+}
