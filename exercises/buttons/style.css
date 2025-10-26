@@ -80,3 +80,44 @@
   background-color: #ff00bf;
   color: white;
 }
+
+#btn_missouri_botanical_garden {
+  margin-top: 100px;
+  font-family: "Georgia", serif;
+  font-size: 20px;
+  color: #2e8b57;
+  text-decoration: none;
+  padding: 12px 12px;
+  border-radius: 8px;
+  transition: background-color 0.5s, color 0.5s, transform 0.3s;
+  display: flex;
+  flex-direction: row;
+}
+
+#btn_missouri_botanical_garden img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  aspect-ratio: 1;
+}
+
+#btn_tesla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Zilla Slab", serif;
+}
+
+#btn_tesla img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+  aspect-ratio: auto 1 / 1;
+}
