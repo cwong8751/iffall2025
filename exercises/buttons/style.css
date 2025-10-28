@@ -20,22 +20,20 @@
 
 #btn_ibm {
   margin-top: 100px;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 22px;
-  font-weight: bold;
-  color: black;
   text-decoration: none;
   gap: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 20px 40px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
 }
 
-#btn_ibm:hover {
+#btn_ibm span:hover {
   color: white;
-  background-color: #006699;
-  transition: all 1s ease;
 }
 
 #btn_ibm i {
@@ -57,23 +55,18 @@
   transition: all 1s ease;
 }
 
-#btn_ibm:not(:hover) i {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 1s ease;
-}
-
 #btn_lyft {
   margin-top: 100px;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   color: #ff00bf;
   text-decoration: none;
   border: 2px solid #ff00bf;
   padding: 10px 30px;
-  border-radius: 30px;
+  border-radius: 40px;
   transition: background-color 0.5s, color 0.5s;
   font-weight: bolder;
+  display: inline-flex;
 }
 
 #btn_lyft:hover {
@@ -92,17 +85,35 @@
   transition: background-color 0.5s, color 0.5s, transform 0.3s;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+
+#btn_missouri_botanical_garden span {
+  opacity: 1;
+  transition: opacity 1s ease;
 }
 
 #btn_missouri_botanical_garden img {
-  height: 40px;
+  height: 60px;
   width: auto;
+  position: absolute;
   vertical-align: middle;
-  margin-right: 10px;
-  aspect-ratio: 1;
+  transition: all 1s ease;
+  opacity: 0;
+}
+
+#btn_missouri_botanical_garden:hover img {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+#btn_missouri_botanical_garden span:hover {
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 #btn_tesla {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,12 +123,198 @@
   text-decoration: none;
   font-size: 22px;
   font-family: "Zilla Slab", serif;
+  padding: 20px;
 }
 
 #btn_tesla img {
-  height: 40px;
   width: auto;
   vertical-align: middle;
+  transition: all 0.6s ease;
   margin-right: 10px;
   aspect-ratio: auto 1 / 1;
+}
+
+#btn_tesla #tesla-car {
+  height: 50px;
+  width: auto;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+}
+
+#btn_tesla #tesla-logo {
+  height: 30px;
+  width: auto;
+  margin-top: 10px;
+}
+
+#btn_tesla:hover #tesla-car {
+  transform: translate(-50%, -30px);
+  opacity: 1;
+}
+
+#btn_tesla:hover #tesla-logo {
+  opacity: 0.2;
+}
+
+#btn_fitbit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  color: #4cc2c4;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#btn_fitbit img {
+  width: 60px;
+  height: auto;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#btn_fitbit:hover img {
+  animation: rotate 3s linear infinite;
+}
+
+#btn_instagram {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-decoration: none;
+}
+
+#btn_instagram i {
+  font-size: 60px;
+  color: #e1306c;
+}
+
+#btn_instagram:hover i {
+  transition: transform 1s ease;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  padding: 6px 0;
+  border-radius: 20px;
+  color: white;
+}
+
+#btn_facebook {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#btn_facebook span {
+  opacity: 1;
+  transition: opacity 1s ease;
+  color: blue;
+}
+
+#btn_facebook span:active {
+  color: blue;
+}
+
+#btn_facebook i:active {
+  color: blue;
+}
+
+#btn_facebook span:hover {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+#btn_facebook i {
+  position: relative;
+  transition: transform 1s ease;
+}
+
+#btn_facebook:hover i {
+  transform: translateX(150%) scale(2);
+  transition: transform 1s ease;
+}
+
+#btn_electrabike {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: rgb(0, 172, 185);
+  padding: 10px 0;
+  transform: scale(1);
+  transition: transform 1s ease;
+}
+
+#btn_electrabike img {
+  height: 60px;
+  width: auto;
+}
+
+#btn_electrabike span {
+  font-size: 20px;
+  font-family: "Oxanium", sans-serif;
+  color: white;
+}
+
+#btn_electrabike:hover {
+  transform: scale(1.5);
+  transition: transform 1s ease;
+}
+
+#btn_harley_davidson {
+  position: relative;
+  margin-top: 100px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+#btn_harley_davidson img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+#btn_harley_davidson span {
+  font-size: 20px;
+  font-family: "Homenaje", serif;
+  color: black;
+  position: absolute;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  transition: color 0.5s ease-in-out;
+}
+
+#btn_harley_davidson:hover span {
+  color: rgb(255, 102, 35);
+  transition: color 0.5s ease-in-out;
 }
