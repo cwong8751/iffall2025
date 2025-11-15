@@ -10,7 +10,7 @@ header ul {
 }
 
 header ul li a {
-  color: white;
+  color: #f5f3ef;
   text-decoration: none;
   font-weight: 600;
 }
@@ -34,8 +34,28 @@ section {
 
 section:first-of-type {
   flex-direction: column;
-  background: url("./img/head\ image.webp");
   padding: 10em 10em 5em 10em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section.default:first-of-type {
+  background: url("./img/head\ image.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section.noeuro:first-of-type {
+  background: url("./img/raven_euro1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section.asian:first-of-type {
+  background: url("./img/raven_asian1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -48,9 +68,23 @@ section:nth-of-type(2) .container-right {
   background-position: top;
 }
 
+section:nth-of-type(2).noeuro .container-right {
+  background: url("./img/raven_euro2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(2).asian .container-right {
+  background: url("./img/raven_asian2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; /* fix this */
+}
+
 section:nth-of-type(3) .container-right {
   background-color: #1e1e1e;
-  color: white;
+  color: #f5f3ef;
 }
 
 section:nth-of-type(3) .container-left {
@@ -60,6 +94,20 @@ section:nth-of-type(3) .container-left {
   background-position: top;
 }
 
+section:nth-of-type(3).noeuro .container-left {
+  background: url('./img/raven_euro3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(3).asian .container-left {
+  background: url("./img/raven_asian4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 section:nth-of-type(4) .container-right {
   background: url("./img/raven_scavenge.jpg");
   background-size: cover;
@@ -67,11 +115,59 @@ section:nth-of-type(4) .container-right {
   background-position: center;
 }
 
+section:nth-of-type(4).noeuro .container-right {
+  background: url("./img/raven_euro4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section:nth-of-type(4).asian .container-right {
+  background: url("./img/raven_asian5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(5) .container-right {
+  background-color: #1e1e1e;
+  color: #f5f3ef;
+}
+
+section:nth-of-type(5).noeuro .container-left {
+  background: url("./img/raven_euro5.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section:nth-of-type(5).asian .container-left {
+  background: url("./img/raven_asian3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top; /* fix this */ 
+}
+
 section:last-of-type {
   flex-direction: column;
   background: #231e19;
   padding: 5em 10em 10em 10em;
 }
+
+section:nth-of-type(6).noeuro  {
+  background: url("./img/raven_euro6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(6).asian  {
+  background: url("./img/raven_asianf.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 
 .gallery {
   display: flex;
@@ -82,7 +178,7 @@ section:last-of-type {
 }
 
 section:last-of-type img {
-  width: 33.333%; 
+  width: 33.333%;
   display: block;
   margin: 0;
   padding: 0;
@@ -97,7 +193,7 @@ section:last-of-type img {
   max-width: 600px;
   min-height: 302px;
   background-color: #1e1e1e;
-  color: white;
+  color: #f3f3f3;
   justify-content: center;
   padding-left: 10em;
 }
@@ -124,7 +220,7 @@ footer {
   text-align: start;
   padding: 1rem;
   background: #1e1e1e;
-  color: white;
+  color: #f5f3ef;
   padding-left: 9.9rem;
 }
 
