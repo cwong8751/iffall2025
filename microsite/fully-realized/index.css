@@ -4,7 +4,11 @@ header ul {
   padding: 0;
   display: flex;
   gap: 2rem;
-  background: #1e1e1e;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
   padding: 1rem 2rem;
   padding-left: 10em;
 }
@@ -41,56 +45,64 @@ section:first-of-type {
 }
 
 section.default:first-of-type {
-  background: url("./img/head\ image.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("./img/head\ image.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section.noeuro:first-of-type {
-  background: url("./img/raven_euro1.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("./img/raven_euro1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section.asian:first-of-type {
-  background: url("./img/raven_asian1.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("./img/raven_asian1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section.na:first-of-type {
-  background: url("./img/raven_na6.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("./img/raven_na6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(2) .container-right {
-  background: url("./img/corvus.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/corvus.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(2).noeuro .container-right {
-  background: url("./img/raven_euro2.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_euro2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(2).asian .container-right {
-  background: url("./img/raven_asian2.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_asian2.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; /* fix this */
 }
 
 section:nth-of-type(2).na .container-right {
-  background: url("./img/raven_na4.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_na4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -102,49 +114,64 @@ section:nth-of-type(3) .container-right {
 }
 
 section:nth-of-type(3) .container-left {
-  background: url("./img/raven_london.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_london.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(3).noeuro .container-left {
-  background: url('./img/raven_euro3.jpg');
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_euro3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(3).asian .container-left {
-  background: url("./img/raven_asian4.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_asian4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section:nth-of-type(3).na .container-left {
-  background: url("./img/raven_na7.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_na7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(4) .container-right {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_scavenge.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(4).noeuro .container-right {
-  background: url("./img/raven_euro4.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_euro4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section:nth-of-type(4).asian .container-right {
-  background: url("./img/raven_asian5.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_asian5.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
 section:nth-of-type(4).na .container-right {
-  background: url("./img/raven_na5.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_na5.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -156,21 +183,24 @@ section:nth-of-type(5) .container-right {
 }
 
 section:nth-of-type(5).noeuro .container-left {
-  background: url("./img/raven_euro5.jpeg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_euro5.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 section:nth-of-type(5).asian .container-left {
-  background: url("./img/raven_asian3.webp");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_asian3.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top; /* fix this */ 
+  background-position: top; /* fix this */
 }
 
 section:nth-of-type(5).na .container-left {
-  background: url("./img/raven_na10.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_na10.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -182,27 +212,29 @@ section:last-of-type {
   padding: 5em 10em 10em 10em;
 }
 
-section:nth-of-type(6).noeuro  {
-  background: url("./img/raven_euro6.jpg");
+section:nth-of-type(6).noeuro {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_euro6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
 }
 
-section:nth-of-type(6).asian  {
-  background: url("./img/raven_asianf.webp");
+section:nth-of-type(6).asian {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_asianf.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-section:nth-of-type(6).na  {
-  background: url("./img/raven_na9.jpeg");
+section:nth-of-type(6).na {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./img/raven_na9.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 
 .gallery {
   display: flex;
