@@ -1,0 +1,104 @@
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  background: #111;
+  padding: 1rem 2rem;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+.container-left,
+.container-right {
+  width: 50%;
+  padding: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
+}
+
+section:first-of-type {
+  flex-direction: column;
+  background: url("./img/head\ image.webp");
+  padding: 10em 10em 5em 10em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section:nth-of-type(2) .container-right {
+  background: url("./img/corvus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(3) .container-right{
+  background-color: #111;
+  color: white;
+}
+
+section:nth-of-type(3) .container-left {
+  background: url("./img/raven_london.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+section:nth-of-type(4) .container-right {
+  background: url("./img/raven_scavenge.jpg");
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section:last-of-type {
+  flex-direction: column;
+  background: url("./img/corvus.jpg");
+  padding: 5em 10em 10em 10em;
+}
+
+.container-left {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  min-height: 350px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+}
+
+.container-right {
+  flex: 1 1 50%;
+  min-height: 350px;
+  background-color: #f3f3f3; 
+  justify-content: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #111;
+  color: white;
+}
