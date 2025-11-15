@@ -61,6 +61,13 @@ section.asian:first-of-type {
   background-position: center;
 }
 
+section.na:first-of-type {
+  background: url("./img/raven_na6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 section:nth-of-type(2) .container-right {
   background: url("./img/corvus.jpg");
   background-size: cover;
@@ -80,6 +87,13 @@ section:nth-of-type(2).asian .container-right {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; /* fix this */
+}
+
+section:nth-of-type(2).na .container-right {
+  background: url("./img/raven_na4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 section:nth-of-type(3) .container-right {
@@ -108,11 +122,11 @@ section:nth-of-type(3).asian .container-left {
   background-position: center;
 }
 
-section:nth-of-type(4) .container-right {
-  background: url("./img/raven_scavenge.jpg");
+section:nth-of-type(3).na .container-left {
+  background: url("./img/raven_na7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 section:nth-of-type(4).noeuro .container-right {
@@ -127,6 +141,13 @@ section:nth-of-type(4).asian .container-right {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
+}
+
+section:nth-of-type(4).na .container-right {
+  background: url("./img/raven_na5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 section:nth-of-type(5) .container-right {
@@ -148,6 +169,13 @@ section:nth-of-type(5).asian .container-left {
   background-position: top; /* fix this */ 
 }
 
+section:nth-of-type(5).na .container-left {
+  background: url("./img/raven_na10.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 section:last-of-type {
   flex-direction: column;
   background: #231e19;
@@ -163,6 +191,13 @@ section:nth-of-type(6).noeuro  {
 
 section:nth-of-type(6).asian  {
   background: url("./img/raven_asianf.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section:nth-of-type(6).na  {
+  background: url("./img/raven_na9.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
