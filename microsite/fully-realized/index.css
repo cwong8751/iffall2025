@@ -10,35 +10,29 @@ header ul {
   left: 0;
   z-index: 10;
   padding: 1rem 2rem;
-  padding-left: 10em;
 }
 
 header ul li a {
   color: #f5f3ef;
   text-decoration: none;
   font-weight: 600;
+  font-family: "EB Garamond", serif;
 }
 
 header ul li a:hover {
   text-decoration: underline;
 }
 
-.container-left,
-.container-right {
-  width: 50%;
-  padding: 1.5rem;
-}
-
 section {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   margin: 0;
 }
 
 section:first-of-type {
   flex-direction: column;
-  padding: 10em 10em 5em 10em;
+  padding: 7em 3em;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -109,7 +103,7 @@ section:nth-of-type(2).na .container-right {
 }
 
 section:nth-of-type(3) .container-right {
-  background-color: #1e1e1e;
+  background-color: #3c3c3c;
   color: #f5f3ef;
 }
 
@@ -178,7 +172,7 @@ section:nth-of-type(4).na .container-right {
 }
 
 section:nth-of-type(5) .container-right {
-  background-color: #1e1e1e;
+  background-color: #3c3c3c;
   color: #f5f3ef;
 }
 
@@ -209,7 +203,7 @@ section:nth-of-type(5).na .container-left {
 section:last-of-type {
   flex-direction: column;
   background: #231e19;
-  padding: 5em 10em 10em 10em;
+  padding: 5em 5em 10em 5em;
 }
 
 section:nth-of-type(6).noeuro {
@@ -250,23 +244,33 @@ section:last-of-type img {
   margin: 0;
   padding: 0;
   object-fit: cover;
-  height: auto;
+  max-height: 300px;
+}
+
+.divider {
+  height: 1em;
+  background: #304539;
 }
 
 .container-left {
-  flex: 1 1 40%;
+  flex: 1 1 400px;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   min-height: 302px;
-  background-color: #1e1e1e;
+  background-color: #3c3c3c;
   color: #f3f3f3;
   justify-content: center;
-  padding-left: 10em;
+  padding-left: 5em;
+  height: auto;
+}
+
+.container-left p {
+  max-width: 80%;
+  font-size: 14px;
 }
 
 .container-right {
-  flex: 1 1 30%;
+  flex: 1 1 400px;
   min-height: 350px;
   background-color: #f3f3f3;
   justify-content: center;
@@ -274,8 +278,14 @@ section:last-of-type img {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 3em;
+  padding-right: 2em;
+  height: auto;
+}
+
+.container-right p {
+  max-width: 80%;
+  font-size: 14px;
 }
 
 body {
@@ -286,7 +296,7 @@ body {
 footer {
   text-align: start;
   padding: 1rem;
-  background: #1e1e1e;
+  background: #3c3c3c;
   color: #f5f3ef;
   padding-left: 9.9rem;
 }
@@ -343,4 +353,245 @@ table {
 td {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+@media (max-width: 975px) {
+  section {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  section:first-of-type {
+    padding: 0;
+    margin: 0;
+  }
+
+  header ul {
+    padding: 0;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+
+  section:first-of-type.default,
+  section:first-of-type.noeuro,
+  section:first-of-type.asian,
+  section:first-of-type.na {
+    padding: 8em 1em 8em 1em;
+  }
+
+  .container-left {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 1em;
+    padding-right: 0;
+  }
+
+  .container-right {
+    padding-left: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 0;
+  }
+
+  .divider {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  footer {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  section:first-of-type {
+    padding: 8em 3em 8em 3em;
+  }
+
+  section:nth-of-type(2) .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/corvus.jpg");
+  }
+
+  section:nth-of-type(2).noeuro .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_euro2.webp");
+  }
+
+  section:nth-of-type(2).asian .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_asian2.webp");
+  }
+
+  section:nth-of-type(2).na .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_na4.jpg");
+    background-size: cover;
+  }
+
+  section:nth-of-type(2) .container-right,
+  section:nth-of-type(2).noeuro .container-right,
+  section:nth-of-type(2).asian .container-right,
+  section:nth-of-type(2).na .container-right {
+    display: none;
+  }
+
+  section:nth-of-type(3) .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_london.jpg");
+  }
+
+  section:nth-of-type(3).noeuro .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_euro3.jpg");
+  }
+
+  section:nth-of-type(3).asian .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_asian4.jpg");
+  }
+
+  section:nth-of-type(3).na .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_na7.jpg");
+  }
+
+  section:nth-of-type(3) .container-left,
+  section:nth-of-type(3).noeuro .container-left,
+  section:nth-of-type(3).asian .container-left,
+  section:nth-of-type(3).na .container-left {
+    display: none;
+  }
+
+  section:nth-of-type(4) .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_scavenge.jpg");
+  }
+
+  section:nth-of-type(4).noeuro .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_euro4.jpg");
+  }
+
+  section:nth-of-type(4).asian .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_asian5.webp");
+  }
+
+  section:nth-of-type(4).na .container-left {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_na5.webp");
+  }
+
+  section:nth-of-type(4) .container-right,
+  section:nth-of-type(4).noeuro .container-right,
+  section:nth-of-type(4).asian .container-right,
+  section:nth-of-type(4).na .container-right {
+    display: none;
+  }
+
+  section:nth-of-type(5) .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_euro5.jpeg");
+    background-size: cover;
+  }
+
+  section:nth-of-type(5).asian .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_asian3.webp");
+    background-size: cover;
+  }
+
+  section:nth-of-type(5).na .container-right {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+      ),
+      url("./img/raven_na10.jpg");
+  }
+
+  section:nth-of-type(5) .container-left,
+  section:nth-of-type(5).noeuro .container-left,
+  section:nth-of-type(5).asian .container-left,
+  section:nth-of-type(5).na .container-left {
+    display: none;
+  }
+
+  :root {
+    overscroll-behavior: none;
+  }
+}
+
+@media (max-width: 600px) {
+  section:first-of-type.default,
+  section:first-of-type.noeuro,
+  section:first-of-type.asian,
+  section:first-of-type.na {
+    padding: 6em 1em 6em 1em;
+  }
+
+  :root {
+    overscroll-behavior: none;
+  }
 }
