@@ -499,8 +499,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.8rem;
-  font-weight: lighter;
+  font-size: 2rem;
 }
 
 h3 {
@@ -514,7 +513,7 @@ h3 {
 
 p {
   font-family: "Crimson Text", serif;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #f5f3ef;
   padding-top: 0;
   padding-bottom: 0;
