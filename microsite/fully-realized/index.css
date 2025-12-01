@@ -74,7 +74,7 @@ section.noeuro:first-of-type h3,
 section.noeuro:first-of-type p,
 section.noeuro:first-of-type h1 {
   color: #a5c9e8;
-  font-family: 'Almendra Display', serif;
+  font-family: "Almendra Display", serif;
   font-weight: 900;
 }
 
@@ -82,14 +82,14 @@ section.asian:first-of-type h3,
 section.asian:first-of-type p,
 section.asian:first-of-type h1 {
   color: #d4af37;
-  font-family: 'Sancreek', serif;
+  font-family: "Sancreek", serif;
 }
 
 section.na:first-of-type h3,
 section.na:first-of-type p,
 section.na:first-of-type h1 {
   color: #e8b86d;
-  font-family: 'Bungee Shade', cursive;
+  font-family: "Bungee Shade", cursive;
 }
 
 section.asian:first-of-type {
@@ -106,7 +106,8 @@ section.asian:first-of-type {
 }
 
 section.na:first-of-type {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(232, 184, 109, 0.35)
     ),
@@ -152,7 +153,8 @@ section:nth-of-type(2).asian .container-right {
 }
 
 section:nth-of-type(2).na .container-right {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(232, 184, 109, 0.35),
       rgba(232, 184, 109, 0.35)
     ),
@@ -177,7 +179,7 @@ section:nth-of-type(5).noeuro .container-right {
   font-family: "Crimson Text", serif;
 }
 
-section:nth-of-type(2).noeuro .container-left h3, 
+section:nth-of-type(2).noeuro .container-left h3,
 section:nth-of-type(3).noeuro .container-right h3,
 section:nth-of-type(4).noeuro .container-left h3,
 section:nth-of-type(5).noeuro .container-right h3 {
@@ -210,7 +212,6 @@ section:nth-of-type(5).na .container-right {
   color: #f5f3f0;
   font-family: "Source Sans 3", sans-serif;
 }
-
 
 section:nth-of-type(2).na .container-left h3,
 section:nth-of-type(3).na .container-right h3,
@@ -255,7 +256,8 @@ section:nth-of-type(3).asian .container-left {
 }
 
 section:nth-of-type(3).na .container-left {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(232, 184, 109, 0.35),
       rgba(232, 184, 109, 0.35)
     ),
@@ -301,7 +303,8 @@ section:nth-of-type(4).asian .container-right {
 }
 
 section:nth-of-type(4).na .container-right {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(232, 184, 109, 0.35),
       rgba(232, 184, 109, 0.35)
     ),
@@ -344,7 +347,8 @@ section:nth-of-type(5).asian .container-left {
 }
 
 section:nth-of-type(5).na .container-left {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(232, 184, 109, 0.35),
       rgba(232, 184, 109, 0.35)
     ),
@@ -387,7 +391,8 @@ section:nth-of-type(6).asian {
 }
 
 section:nth-of-type(6).na {
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       rgba(98, 78, 46, 0.622),
       rgba(159, 126, 75, 0.22)
     ),
@@ -436,7 +441,7 @@ section:last-of-type img {
   flex: 1 1 400px;
   display: flex;
   flex-direction: column;
-  min-height: 302px;
+  min-height: 300px;
   background-color: #3c3c3c;
   color: #f3f3f3;
   justify-content: center;
@@ -451,15 +456,14 @@ section:last-of-type img {
 
 .container-right {
   flex: 1 1 400px;
-  min-height: 350px;
+  min-height: 300px;
   background-color: #f3f3f3;
   justify-content: center;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  padding-left: 3em;
-  padding-right: 2em;
+  padding-left: 5em;
   height: auto;
 }
 
@@ -536,12 +540,7 @@ td {
 
 @media (max-width: 975px) {
   section {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-
-  section:first-of-type {
+    display: block;
     padding: 0;
     margin: 0;
   }
@@ -559,21 +558,18 @@ td {
     padding: 8em 1em 8em 1em;
   }
 
-  .container-left {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-left: 1em;
-    padding-right: 0;
-  }
-
-  .container-right {
-    padding-left: 1em;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-right: 0;
+  @media (max-width: 975px) {
+    .container-left,
+    .container-right {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      min-height: auto;
+      padding: 2rem 1rem;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   .divider {
@@ -591,6 +587,10 @@ td {
     padding: 8em 3em 8em 3em;
   }
 
+  section:last-of-type {
+    padding: 2rem 1rem;
+  }
+
   section:nth-of-type(2) .container-left {
     background: linear-gradient(
         to bottom,
@@ -603,8 +603,8 @@ td {
   section:nth-of-type(2).noeuro .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(165, 201, 232, 0.35),
+        rgba(165, 201, 232, 0.35)
       ),
       url("./img/raven_euro2.webp");
   }
@@ -612,8 +612,8 @@ td {
   section:nth-of-type(2).asian .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(212, 175, 55, 0.45),
+        rgba(212, 175, 55, 0.45)
       ),
       url("./img/raven_asian2.webp");
   }
@@ -621,8 +621,8 @@ td {
   section:nth-of-type(2).na .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(232, 184, 109, 0.35),
+        rgba(232, 184, 109, 0.35)
       ),
       url("./img/raven_na4.jpg");
     background-size: cover;
@@ -647,8 +647,8 @@ td {
   section:nth-of-type(3).noeuro .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(165, 201, 232, 0.35),
+        rgba(165, 201, 232, 0.35)
       ),
       url("./img/raven_euro3.jpg");
   }
@@ -656,8 +656,8 @@ td {
   section:nth-of-type(3).asian .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(212, 175, 55, 0.45),
+        rgba(212, 175, 55, 0.45)
       ),
       url("./img/raven_asian4.jpg");
   }
@@ -665,8 +665,8 @@ td {
   section:nth-of-type(3).na .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(232, 184, 109, 0.35),
+        rgba(232, 184, 109, 0.35)
       ),
       url("./img/raven_na7.jpg");
   }
@@ -690,8 +690,8 @@ td {
   section:nth-of-type(4).noeuro .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(165, 201, 232, 0.35),
+        rgba(165, 201, 232, 0.35)
       ),
       url("./img/raven_euro4.jpg");
   }
@@ -699,8 +699,8 @@ td {
   section:nth-of-type(4).asian .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(212, 175, 55, 0.45),
+        rgba(212, 175, 55, 0.45)
       ),
       url("./img/raven_asian5.webp");
   }
@@ -708,8 +708,8 @@ td {
   section:nth-of-type(4).na .container-left {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(232, 184, 109, 0.35),
+        rgba(232, 184, 109, 0.35)
       ),
       url("./img/raven_na5.webp");
   }
@@ -721,11 +721,11 @@ td {
     display: none;
   }
 
-  section:nth-of-type(5) .container-right {
+  section:nth-of-type(5).noeuro .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(165, 201, 232, 0.35),
+        rgba(165, 201, 232, 0.35)
       ),
       url("./img/raven_euro5.jpeg");
     background-size: cover;
@@ -734,8 +734,8 @@ td {
   section:nth-of-type(5).asian .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(212, 175, 55, 0.45),
+        rgba(212, 175, 55, 0.45)
       ),
       url("./img/raven_asian3.webp");
     background-size: cover;
@@ -744,10 +744,23 @@ td {
   section:nth-of-type(5).na .container-right {
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
+        rgba(232, 184, 109, 0.35),
+        rgba(232, 184, 109, 0.35)
       ),
       url("./img/raven_na10.jpg");
+  }
+
+  section:nth-of-type(6).na {
+    background: linear-gradient(
+        to bottom,
+        rgba(159, 126, 75, 0.622),
+        rgba(159, 126, 75, 0.622)
+      ),
+      url("./img/raven_na9.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: saturate(0.85) contrast(1.2);
   }
 
   section:nth-of-type(5) .container-left,
@@ -768,9 +781,5 @@ td {
   section:first-of-type.asian,
   section:first-of-type.na {
     padding: 6em 1em 6em 1em;
-  }
-
-  :root {
-    overscroll-behavior: none;
   }
 }
